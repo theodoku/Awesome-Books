@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main_wrapper {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 17px;
+  padding-top: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 25rem;
+  margin: auto;
+  max-width: 100%;
+  margin-top: 1.1rem;
+}
+
+.error {
+  display: none;
+}
+.error .active {
+  display: block;
+  color: red;
+}/*# sourceMappingURL=styles.css.map */
