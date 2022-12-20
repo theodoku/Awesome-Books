@@ -9,12 +9,115 @@
   font-style: normal;
 }
 
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  border: 2px solid #000;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.nav_bar {
+  display: flex;
+  gap: 0.8rem;
+}
+.nav_bar a {
+  text-decoration: none;
+  color: #000;
+  border-right: 2px solid black;
+  padding-right: 0.8rem;
+}
+.nav_bar a:first-child {
+  color: #008000;
+}
+.nav_bar a:nth-last-child(1) {
+  border-right: none;
+  padding-right: 0;
+}
+.nav_bar a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #00f;
+}
+
+#date {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+hr {
+  width: 7rem;
+  background-color: #000;
+  border: 2px solid #000;
+  margin-top: 1.5rem;
+  border-radius: 50%;
+}
+
 .main_wrapper {
   display: flex;
   margin: auto;
   flex-direction: column;
   gap: 17px;
   padding-top: 3rem;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.5px;
+}
+.book-list .book-wrapper:nth-child(odd) {
+  background: rgb(194, 187, 187);
+}
+
+.book-info {
+  display: flex;
+  gap: 5px;
+}
+
+button {
+  padding: 0 5px;
+  border: 2px solid;
+  box-shadow: 3px 3px black;
+}
+button :hover {
+  cursor: pointer;
+}
+
+#add-book {
+  padding: 0.25rem 1rem;
+  align-self: flex-end;
+}
+
+.remove-btn {
+  padding: 0 5px;
+  border: 2px solid;
+  box-shadow: 3px 3px black;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  gap: 1.2rem;
+}
+
+input {
+  border: 2px #000 solid;
+  padding: 5px;
+}
+input ::placeholder {
+  color: #000;
 }
 
 form {
@@ -33,4 +136,35 @@ form {
 .error .active {
   display: block;
   color: red;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+.contact p {
+  margin-right: 130px;
+}
+.contact ul {
+  margin-left: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border: 2px solid black;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
