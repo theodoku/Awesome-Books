@@ -1,94 +1,95 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Balsamiq Sans', sans-serif;
-    font-weight: 600;
-    font-style: normal;
-} 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Balsamiq Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
 
 .header_wrapper {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    border: 2px solid #000;
-    width: 100%;
-    padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  border: 2px solid #000;
+  width: 100%;
+  padding: 0.5rem 1rem;
 }
 
 .nav_bar {
-    display: flex;
-    gap: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
 
-    a {
-        text-decoration: none;
-        color: #000;
-        border-right: 2px solid black;
-        padding-right: 0.8rem;
-    }
+  a {
+    text-decoration: none;
+    color: #000;
+    border-right: 2px solid black;
+    padding-right: 0.8rem;
+  }
 
-    a:first-child {
-        color: #008000;
-    }
+  a:first-child {
+    color: #008000;
+  }
 
-   a:nth-last-child(1) {
+  a:nth-last-child(1) {
     border-right: none;
     padding-right: 0;
-   }
+  }
 
-   a:hover {
+  a:hover {
     text-decoration: underline;
     text-underline-position: under;
     color: #00f;
-   }
+  }
 }
 
 #date {
-    align-self: flex-end;
-    padding:0.5rem 1rem;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
 }
 
 .books {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
 hr {
-    width: 7rem;
-    background-color: #000;
-    border: 2px solid #000;
-    margin-top: 1.5rem;
-    border-radius: 50%;
+  width: 7rem;
+  background-color: #000;
+  border: 2px solid #000;
+  margin-top: 1.5rem;
+  border-radius: 50%;
 }
+
 .main_wrapper {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    gap: 17px;
-    padding-top: 3rem;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 17px;
+  padding-top: 3rem;
 }
 
 .book-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.5px;
 
-    .book-wrapper:nth-child(odd) {
-        background: rgb(194, 187, 187);
-    }
+  .book-wrapper:nth-child(odd) {
+    background: rgb(194, 187, 187);
+  }
 }
 
 .book-info {
-    display: flex;
-    gap: 5px;
-  }
+  display: flex;
+  gap: 5px;
+}
 
-button{
+button {
   padding: 0 5px;
   border: 2px solid;
   box-shadow: 3px 3px black;
@@ -99,9 +100,9 @@ button{
 }
 
 #add-book {
-    padding: 0.25rem 1rem;
-    align-self: flex-end;
-  }
+  padding: 0.25rem 1rem;
+  align-self: flex-end;
+}
 
 .remove-btn {
   padding: 0 5px;
@@ -117,56 +118,56 @@ button{
   gap: 1.2rem;
 }
 
-
 input {
-    border: 2px #000 solid;
-    padding: 5px;
+  border: 2px #000 solid;
+  padding: 5px;
 
-    ::placeholder {
-        color: #000;
-    }
+  ::placeholder {
+    color: #000;
   }
+}
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-    width: 25rem;
-    margin: auto;
-    max-width: 100%;
-    margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 25rem;
+  margin: auto;
+  max-width: 100%;
+  margin-top: 1.1rem;
 }
 
 .error {
-    display: none;
+  display: none;
 
-    .active {
-        display: block;
-        color: red;
-    }
+  .active {
+    display: block;
+    color: red;
+  }
 }
 
 h1 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1.5rem;
-    
-    p {
-        margin-right: 130px;
-    }
-    ul {
-        margin-left: 100px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+
+  p {
+    margin-right: 130px;
+  }
+
+  ul {
+    margin-left: 100px;
+  }
 }
 
 footer {
