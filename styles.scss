@@ -29,7 +29,7 @@
     padding-right: 0.8rem;
   }
 
-  a:first-child {
+  a.green{
     color: #008000;
   }
 
@@ -74,6 +74,12 @@ hr {
 }
 
 .book-list {
+  width: 99%;
+  border: 2px #000 solid;
+  gap: 15px;
+}
+
+#book-list div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -93,10 +99,6 @@ button {
   padding: 0 5px;
   border: 2px solid;
   box-shadow: 3px 3px black;
-
-  :hover {
-    cursor: pointer;
-  }
 }
 
 #add-book {
@@ -110,7 +112,7 @@ button {
   box-shadow: 3px 3px black;
 }
 
-.input-form {
+#input-form {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -154,7 +156,7 @@ h2 {
   font-size: 2rem;
 }
 
-.contact {
+#contact {
   display: flex;
   flex-direction: column;
   align-items: center;

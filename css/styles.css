@@ -22,23 +22,19 @@
   display: flex;
   gap: 0.8rem;
 }
-
 .nav_bar a {
   text-decoration: none;
   color: #000;
   border-right: 2px solid black;
   padding-right: 0.8rem;
 }
-
-.nav_bar a:first-child {
+.nav_bar a.green {
   color: #008000;
 }
-
 .nav_bar a:nth-last-child(1) {
   border-right: none;
   padding-right: 0;
 }
-
 .nav_bar a:hover {
   text-decoration: underline;
   text-underline-position: under;
@@ -74,13 +70,18 @@ hr {
 }
 
 .book-list {
+  width: 99%;
+  border: 2px #000 solid;
+  gap: 15px;
+}
+
+#book-list div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 2.5px;
 }
-
-.book-list .book-wrapper:nth-child(odd) {
+#book-list div .book-wrapper:nth-child(odd) {
   background: rgb(194, 187, 187);
 }
 
@@ -95,7 +96,7 @@ button {
   box-shadow: 3px 3px black;
 }
 
-button :hover {
+button:hover {
   cursor: pointer;
 }
 
@@ -110,7 +111,7 @@ button :hover {
   box-shadow: 3px 3px black;
 }
 
-.input-form {
+#input-form {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -122,7 +123,6 @@ input {
   border: 2px #000 solid;
   padding: 5px;
 }
-
 input ::placeholder {
   color: #000;
 }
@@ -140,7 +140,6 @@ form {
 .error {
   display: none;
 }
-
 .error .active {
   display: block;
   color: red;
@@ -154,19 +153,17 @@ h2 {
   font-size: 2rem;
 }
 
-.contact {
+#contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   gap: 1.5rem;
 }
-
-.contact p {
+#contact p {
   margin-right: 130px;
 }
-
-.contact ul {
+#contact ul {
   margin-left: 100px;
 }
 
@@ -177,4 +174,4 @@ footer {
   background-color: #fff;
   padding: 0.5rem 1rem;
   width: 100%;
-}
+}/*# sourceMappingURL=styles.css.map */

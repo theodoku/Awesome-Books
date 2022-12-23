@@ -1,7 +1,7 @@
-const bookTitle = document.getElementById('book-title');
-const bookAuthor = document.getElementById('book-author');
+const bookTitle = document.querySelector('#book-title');
+const bookAuthor = document.querySelector('#book-author');
 const errorMsg = document.querySelector('.error');
-const addBtn = document.getElementById('add-book');
+const addBtn = document.querySelector('#add-book');
 class Book {
     constructor(title, author, id) {
         this.title = title;
@@ -22,7 +22,7 @@ class Book {
         </div>
         <button class="remove-btn ${id}"> Remove </button>
         `;
-        const booksList = getElementById('book-list');
+        const booksList = documment.querySelector('#book-list');
         booksList.appendChild(newBook);
         // Delete Selected Book
         const removeBtn = document.querySelectorAll('.remove-btn');
@@ -52,8 +52,8 @@ class Book {
     };
 }
 // Add A New Book
-addBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+addBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     const title = bookTitle.value;
     const author = bookAuthor.value;
     const id = Date.now();
@@ -77,14 +77,53 @@ addBtn.addEventListener('click', (e) => {
     }
 });
 // Script For Single Page Application 
-
+const navBtn = document.querySelectorAll('.nav_bar a');
+const section = document.querySelectorAll('section');
+navBtn[0].addEventListener('click', () => {
+    section[0].style.display = 'flex';
+    section[1].style.display = 'none';
+    section[2].style.display = 'none';
+    navBtn[0].classList.add('green');
+    navBtn[1].classList.remove('green');
+    navBtn[2].classList.remove('green');
+});
+navBtn[1].addEventListener('click', () => {
+    section[0].style.display = 'none';
+    section[1].style.display = 'flex';
+    section[2].style.display = 'none';
+    navBtn[0].classList.remove('green');
+    navBtn[1].classList.add('green');
+    navBtn[2].classList.remove('green');
+});
+navBtn[2].addEventListener('click', () => {
+    section[0].style.display = 'none';
+    section[1].style.display = 'none';
+    section[2].style.display = 'flex';
+    navBtn[0].classList.remove('green');
+    navBtn[1].classList.remove('green');
+    navBtn[2].classList.add('green');
+});
 // Date & Time Display function 
 const refreshTime = () => {
-    const timeDisplay = getElementById('date');
+    const timeDisplay = document.getElementById('date');
     const currentDate = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
     const dateString = currentDate.toLocaleString('en-US', options);
     timeDisplay.textContent = dateString;
     setInterval(refreshTime, 1000);
 };
-refreshTime();
+window.addEventListener('DOMContentLoaded', () => {
+// On Page Load, Display Books From Local Storage.
+    const books = JSON.parse(localStorage.getItem('books'));
+    if (books) {
+        books.forEach((book) => {
+            const theBook = new Book(book.title, book.author, book.id);
+            theBook.displayBooks();
+        });
+    }
+    // On Page Load, Hide Section.
+    section[1].style.display = 'none';
+    section[2].style.display = 'none';
+    // On Page Load, dispaly Time & Date.
+    refreshTime();
+});
