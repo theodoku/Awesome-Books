@@ -81,7 +81,8 @@ hr {
   justify-content: space-between;
   padding: 2.5px;
 }
-#book-list div .book-wrapper:nth-child(odd) {
+
+#book-list .book-wrapper:nth-child(odd) {
   background: rgb(194, 187, 187);
 }
 
@@ -96,10 +97,6 @@ button {
   box-shadow: 3px 3px black;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 #add-book {
   padding: 0.25rem 1rem;
   align-self: flex-end;
@@ -109,6 +106,10 @@ button:hover {
   padding: 0 5px;
   border: 2px solid;
   box-shadow: 3px 3px black;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #input-form {

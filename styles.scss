@@ -84,10 +84,10 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   padding: 2.5px;
+}
 
-  .book-wrapper:nth-child(odd) {
-    background: rgb(194, 187, 187);
-  }
+#book-list .book-wrapper:nth-child(odd) {
+  background: rgb(194, 187, 187);
 }
 
 .book-info {
@@ -110,6 +110,10 @@ button {
   padding: 0 5px;
   border: 2px solid;
   box-shadow: 3px 3px black;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #input-form {
