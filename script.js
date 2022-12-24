@@ -30,7 +30,8 @@ class Book {
         btn.addEventListener('click', () => {
           const booksList = document.querySelectorAll('#book-list div');
           booksList.forEach((theBook) => {
-            if (theBook === btn.classList[1]) {
+            //   Remove Book From Display
+            if (theBook.id === btn.classList[1]) {
               theBook.remove();
             }
             // Remove Book From Local Storage and Store Remaining Using Filter.
@@ -42,7 +43,7 @@ class Book {
               }
               return false;
             });
-            if (remainingBooks > 0) {
+            if (remainingBooks.length > 0) {
               localStorage.setItem('books', JSON.stringify(remainingBooks));
             }
           });

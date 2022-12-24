@@ -141,7 +141,8 @@ form {
 .error {
   display: none;
 }
-.error .active {
+
+.error.active {
   display: block;
   color: red;
 }
@@ -160,12 +161,6 @@ h2 {
   align-items: center;
   padding: 1rem;
   gap: 1.5rem;
-}
-#contact p {
-  margin-right: 130px;
-}
-#contact ul {
-  margin-left: 100px;
 }
 
 footer {

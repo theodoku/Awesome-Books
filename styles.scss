@@ -145,11 +145,11 @@ form {
 
 .error {
   display: none;
+}
 
-  .active {
-    display: block;
-    color: red;
-  }
+.error.active {
+  display: block;
+  color: red;
 }
 
 h1 {
@@ -166,14 +166,6 @@ h2 {
   align-items: center;
   padding: 1rem;
   gap: 1.5rem;
-
-  p {
-    margin-right: 130px;
-  }
-
-  ul {
-    margin-left: 100px;
-  }
 }
 
 footer {
